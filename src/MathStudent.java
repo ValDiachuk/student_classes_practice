@@ -6,7 +6,7 @@ public class MathStudent extends Student{
 
     //HERE! Create a 5 args constructor that chains super class constructor
 
-    public MathStudent(String firstName, String lastName, int age, boolean gender, boolean className) {
+    public MathStudent(String firstName, String lastName, int age, String gender, String className) {
         super(firstName, lastName, age, gender, className);
     }
 

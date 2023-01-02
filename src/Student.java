@@ -4,7 +4,7 @@ public class Student {
 
 
     //HERE! Create a 5 args constructor
-    public Student(String firstName, String lastName, int age, boolean gender, boolean className) {
+    public Student(String firstName, String lastName, int age, String gender, String className) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -25,14 +25,14 @@ public class Student {
     private String firstName;
     private String lastName;
     private int age;
-    private boolean gender;
-    private boolean className;
+    private String gender;
+    private String className;
 
     /*
     HERE!
     Provide public getter method for className only
      */
-    public boolean isClassName() {
+    public String getClassName() {
         return className;
     }
 
@@ -42,14 +42,15 @@ public class Student {
         It should be dynamic considering child classes that inherits
      */
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", gender=" + gender +
-                ", className=" + className +
-                '}';
+        @Override
+        public String toString () {
+            return getClass().getSimpleName() +
+                    "firstName='" + firstName + '\'' +
+                    ", lastName='" + lastName + '\'' +
+                    ", age=" + age +
+                    ", gender=" + gender +
+                    ", className=" + className +
+                    '}';
+        }
     }
-}
+
